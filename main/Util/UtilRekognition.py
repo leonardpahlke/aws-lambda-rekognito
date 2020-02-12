@@ -1,3 +1,4 @@
+from main.config import *
 import boto3
 
 client_rekognition = boto3.client('rekognition')

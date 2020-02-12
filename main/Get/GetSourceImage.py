@@ -1,4 +1,5 @@
 from Util.Util import *
+from main.config import *
 from Util.UtilS3 import create_pre_signed_url, does_key_exist
 
 '''

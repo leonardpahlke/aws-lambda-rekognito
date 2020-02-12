@@ -1,4 +1,5 @@
 from Util.Util import *
+from main.config import *
 from Util.UtilDynamoDB import does_celeb_exist, store_new_celeb
 from Util.UtilRekognition import image_person_count, is_celebrity
 from Util.UtilS3 import update_celeb_image, upload_image

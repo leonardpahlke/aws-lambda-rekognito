@@ -1,4 +1,5 @@
 import boto3
+from main.config import *
 from botocore.errorfactory import ClientError
 
 from Util.Util import *

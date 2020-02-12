@@ -1,4 +1,5 @@
 from Util.Util import *
+from main.config import *
 from Util.UtilDynamoDB import get_results
 
 '''

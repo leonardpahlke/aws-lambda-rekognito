@@ -1,4 +1,5 @@
 from Util.Util import *
+from main.config import *
 from Util.UtilDynamoDB import store_results_in_dynamo_db
 from Util.UtilRekognition import compare_image_similarity, image_person_count
 from Util.UtilS3 import give_me_celeb_picture_keys, upload_image

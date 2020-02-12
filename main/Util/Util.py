@@ -1,12 +1,8 @@
-import binascii
-from io import BytesIO
 import re
 from abc import ABC, abstractmethod
 from PIL import Image
+from main.config import *
 
-IMAGE_SOURCE_BUCKET = 's3-celeb-images'
-CELEBRITIES_FOLDER = 'celebrities'
-USER_FOLDER = 'user'
 JPG = '.jpg'
 S3_KEY_NAME_REGEX = '.*\/(.*)\..*'
 
@@ -58,6 +54,14 @@ DEFAULT_NOT_FOUND_RESPONSE = DEFAULT_RESPONSE.copy()
 DEFAULT_NOT_FOUND_RESPONSE[STATUS_CODE] = NOT_FOUND
 DEFAULT_NOT_FOUND_RESPONSE[BODY][MESSAGE] = 'request failed'
 DEFAULT_NOT_FOUND_RESPONSE[BODY][LOG] = 'request could not be found'
+
+
+class RDSConfig:
+    db_user = RDS_USERNAME
+    db_password = RDS_PASSWORD
+    db_host = RDS_ENDPOINT
+    db_port = RDS_PORT
+    db_name = RDS_NAME
 
 
 class MethodAction(ABC):

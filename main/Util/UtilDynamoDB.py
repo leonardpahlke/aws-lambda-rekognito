@@ -1,4 +1,5 @@
 import boto3
+from main.config import *
 from decimal import Decimal
 from Util.Util import *
 
