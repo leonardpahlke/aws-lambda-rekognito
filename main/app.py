@@ -1,12 +1,12 @@
-# method-action logic
-from Get.GetImageResult import *
-from Get.GetSourceImage import *
-from Post.PostUserImage import *
-from Get.GetCelebrityNames import *
-from Post.PostCelebrityImage import *
-import io
+from Util.Util import *
 
 # all actions that can be requests
+from Get.GetCelebrityNames import GetCelebrityNames
+from Get.GetImageResult import GetImageResult
+from Get.GetSourceImage import GetSourceImage
+from Post.PostCelebrityImage import PostCelebrityImage
+from Post.PostUserImage import PostUserImage
+
 method_actions = [GetSourceImage(), GetImageResult(), GetCelebrityNames(),
                   PostUserImage(), PostCelebrityImage()]
 
@@ -30,19 +30,3 @@ def lambda_handler(event, context):
         lambda_response[BODY][LOG] = e
 
     return lambda_response
-
-# print(PostUserImage().execute(
-#     {"message": {
-#         "user": "",
-#         "request": "",
-#         "celebrity": ""
-#     }}
-# ))
-
-
-def resize_test():
-    img = b64_test_image()
-    resize_image(img)
-
-
-resize_test()
