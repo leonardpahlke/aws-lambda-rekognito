@@ -8,8 +8,8 @@ from main.Util.Util import *
 # from Post.PostUserImage import PostUserImage
 from main.Util.UtilRDS import *
 
-# method_actions = [GetSourceImage(), GetImageResult(), GetCelebrityNames(),
-        #          PostUserImage(), PostCelebrityImage()]
+method_actions = [GetSourceImage(), GetImageResult(), GetCelebrityNames(),
+                 PostUserImage(), PostCelebrityImage()]
 
 
 def lambda_handler(event, context):
